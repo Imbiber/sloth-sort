@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦥 SlothSort
 
-## Getting Started
+> **The Zero-Effort File & Clutter Tidier for International Sloth Day**  
+> Powered by **Google Gemma 2** (running 100% locally via Ollama) and **ElevenLabs Voice AI**.  
+> Built for the **Hacktoberfest Open-Source AI Challenge: Week 3 — Slow and Steady**.
 
-First, run the development server:
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
+[![Gemma 2](https://img.shields.io/badge/Google_Gemma_2-Ollama-4285F4)](https://ollama.com/library/gemma2)
+[![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS_v2-black)](https://elevenlabs.io)
 
+---
+
+## 🦥 The Prompt & Theme: Slow and Steady
+
+International Sloth Day reminds us that sloths have it figured out: move at your own pace, conserve energy, and let automation do the work so you don't have to.
+
+Everyone has a messy `Downloads/` or `Desktop/` folder loaded with chaotic filenames like:
+- `Screen Shot 2026-10-21 at 11.45.12 PM.png`
+- `final_pitch_deck_v3_revised_FINAL2.pptx`
+- `Receipt_Uber_Eats_Oct14.pdf`
+- `IMG_20261019_142311.jpg`
+
+Sorting these manually requires hundreds of clicks, drag-and-drops, and cognitive energy you'd rather spend relaxing.
+
+**SlothSort** is a lazy person's dream:
+1. Drag or paste in your messy files.
+2. Local **Gemma 2** inspects, understands, and categorizes every file into clean directories with clean semantic names.
+3. **ElevenLabs** plays a witty, soothing audio debrief celebrating how lazy you get to be today.
+4. Provides a 1-click **Bash execution script** so your files are sorted instantly on your computer.
+
+---
+
+## 🔒 Why Open Innovation Matters
+
+1. **100% Privacy on Personal Files**: Your desktop clutter contains sensitive tax forms, private invoices, client NDAs, and confidential photos. By running **Gemma 2 locally on-device**, your files and filenames never touch an external third-party server.
+2. **Zero Recurring LLM Fees**: Cloud APIs charge per token. A user cleaning 500 files a day would rack up bills. Running Gemma 2 locally via Ollama costs $0 forever.
+3. **True Offline Resilience**: Works in an airplane or off the grid without an internet connection.
+
+---
+
+## 🏆 Prize Categories
+
+- **Best Use of Gemma ($200)**: Employs Google's open-weight Gemma 2 model locally via Ollama for semantic classification, intelligent renaming, and sloth debrief generation.
+- **Best Use of ElevenLabs ($100)**: Uses ElevenLabs Multilingual v2 to generate relaxing spoken voice debriefs.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- [Ollama](https://ollama.com/) installed and running:
+  ```bash
+  ollama run gemma2:latest
+  ```
+- Node.js 18+ and npm.
+
+### 2. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Imbiber/sloth-sort.git
+cd sloth-sort
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Environment Variables
+Copy `.env.example` to `.env.local`:
+```env
+OLLAMA_BASE_URL=http://localhost:11434
+ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📜 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License.
